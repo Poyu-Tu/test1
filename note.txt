@@ -1,0 +1,51 @@
+初始化:
+    設置使用者訊息(名稱/Email)
+    git config --global user.name "Your Name"
+    git config --global user.email "your.email@example.com"
+    ---
+    初始化git(會在當前目錄建立一個 .git 的子資料夾) = 用來儲存檔案變更的歷史
+    git init
+
+檢視:
+    檢查每個檔案的狀態
+    git status
+    # 檔案狀態 : 
+        1.U 未追蹤(Untracked) : Git 不會去記錄其內容及歷史
+        2.已追蹤(Tracked) : Git 開始記錄
+        3.已暫存(Staged) : 在 Tracked 之前，需讓檔案先進入此狀態，然後 Committed
+        4.已提交[拍照](Committed) : 記錄下當天的版本紀錄
+    ---
+    檢視 Committed 的項目
+    1.git log = 列出先前詳細的提交歷史(詳細)
+    2.git log --oneline = 快速瀏覽過去的提交紀錄(簡易)
+        # (HEAD -> master) = 最新的存檔點
+
+新增:
+    將檔案加入 Git
+    1.git add "檔案名稱"
+        # 此時該檔案旁會顯示 A (Added)，代表已被加入追蹤的清單，準備接受拍照
+    2.git add *.(副檔名) = 代表該所有副檔名
+    3.git add . = 代表將所有變更都加入 Staged，等待拍照
+    ---
+    將檔案拍照
+    git commit -m "輸入訊息(通常為此版本的更動大項目)"
+    ---
+
+還原:
+    把檔案還原到某版本
+    git checkout "ID編號(如3818450，在 log 中)" -- "檔案名稱"
+    # 此變動也需進行拍照
+    ---
+    將全部檔案還原到某個時間點，同時捨棄存檔紀錄(不可逆)
+    git reset --hard "目標還原點ID編號(如3818450，在 log 中)"
+    ---
+刪除:
+    ## 刪除時，需要先重新將該檔案 add ，然後再拍照
+
+其他:
+    比較某檔案新舊版本內容差異
+    git diff "ID編號(如3818450，在 log 中)" -- "檔案名稱"
+    ---
+    忽略檔案
+    1.建立 .gitignore
+    2.將要忽略的檔名或副檔名寫入其中

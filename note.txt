@@ -49,3 +49,6 @@
     忽略檔案
     1.建立 .gitignore
     2.將要忽略的檔名或副檔名寫入其中
+    ---
+    (git hib)連結本地與遠端的儲存庫
+    git remote add origin "網址(如https://github.com/Poyu-Tu/test1.git)"

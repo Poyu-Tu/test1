@@ -59,3 +59,4 @@
     ---
     (git hub) 把本地位於 main 分支的資料推送至雲端
     git push -u origin main
+    # 當本地變更完時要推送至雲端都需要做

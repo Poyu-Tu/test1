@@ -49,6 +49,13 @@
     忽略檔案
     1.建立 .gitignore
     2.將要忽略的檔名或副檔名寫入其中
-    ---
-    (git hib)連結本地與遠端的儲存庫
+
+在github部署:
+    (git hib) 連結本地與遠端的儲存庫
     git remote add origin "網址(如https://github.com/Poyu-Tu/test1.git)"
+    ---
+    (git hub) 將原來的主線分支，從 master 改成 main
+    git branch -M main
+    ---
+    (git hub) 把本地位於 main 分支的資料推送至雲端
+    git push -u origin main

@@ -50,7 +50,7 @@
     1.建立 .gitignore
     2.將要忽略的檔名或副檔名寫入其中
     ---
-    推送至雲端
+    將修改處推送至雲端
     git push
     # 當本地變更完時要推送至雲端都需要做
 
@@ -63,3 +63,11 @@
     ---
     (git hub) 把本地位於 main 分支的資料推送至雲端
     git push -u origin main
+    ---
+    (git hub) 將儲存庫複製到本地端電腦
+    git clone "網誌(如https://github.com/Poyu-Tu/test1.git)"
+    # 下載好的儲存庫會成為一個子資料夾
+    # 如果想用 git 指令操作此儲存庫，需使用 cd "該資料夾目錄(如test1)"
+    ---
+    (git hub) 假設作者在 git hub 上新增了一個新檔案，而協作者要同步存取至自己的本地端時
+    git pull
